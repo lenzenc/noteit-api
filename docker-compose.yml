@@ -45,10 +45,6 @@ services:
     ports:
       - "8080:8080"
     environment:
-      # Security
-      IMGPROXY_KEY: "943b421c9eb07c830af81030552c86009268de4e532ba2ee2eab8247c6da0881"
-      IMGPROXY_SALT: "520f986b998545b4785e0defbc4f3c1203f22de2374a3d53cb7a7fe9fea309c5"
-      
       # Enable S3 support
       IMGPROXY_USE_S3: "true"
       IMGPROXY_S3_ENDPOINT: "http://minio:9000"
@@ -63,10 +59,7 @@ services:
       IMGPROXY_QUALITY: "85"
       IMGPROXY_ENABLE_WEBP_DETECTION: "true"
       IMGPROXY_ENFORCE_WEBP: "false"
-      IMGPROXY_ALLOWED_SOURCES: "s3://images/"
-      
-      # Optional: Enable signed URLs for security
-      IMGPROXY_SIGNATURE_SIZE: "32"
+      IMGPROXY_ALLOWED_SOURCES: "s3://images"
       
       # Logging
       IMGPROXY_LOG_LEVEL: "info"
