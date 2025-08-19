@@ -51,8 +51,8 @@ async def upload_image(file: UploadFile = File(...)) -> UploadResponse:
             content_type=file.content_type or "application/octet-stream"
         )
         
-        # Generate ImgProxy URL
-        imgproxy_url = imgproxy_service.generate_raw_url(file_id)
+        # Generate API URL for image access
+        imgproxy_url = imgproxy_service.generate_api_url(file_id)
         
         return UploadResponse(
             message="File uploaded successfully",
