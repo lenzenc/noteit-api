@@ -41,7 +41,7 @@ class ImgProxyService:
 
     def generate_api_url(self, file_id: str, base_api_url: str = "http://localhost:8000") -> str:
         """Generate API URL for accessing image through the API proxy"""
-        return f"{base_api_url}/api/v1/images/{file_id}"
+        return f"{base_api_url}{settings.API_V1_STR}/images/{file_id}"
 
 
 imgproxy_service = ImgProxyService()

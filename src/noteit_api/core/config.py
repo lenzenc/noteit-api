@@ -11,7 +11,7 @@ load_dotenv()
 class Settings(BaseSettings):
     PROJECT_NAME: str = os.getenv("PROJECT_NAME", "NoteIt API")
     VERSION: str = os.getenv("VERSION", "0.1.0")
-    API_V1_STR: str = os.getenv("API_V1_STR", "/api/v1")
+    API_V1_STR: str = os.getenv("API_V1_STR", "/noteit/v1")
     
     ALLOWED_ORIGINS: List[str] = os.getenv("ALLOWED_ORIGINS", "").split(",") if os.getenv("ALLOWED_ORIGINS") else []
     
